@@ -18,6 +18,10 @@ public class CreateFlightCommandExecutor extends CommandLineExecutor{
     @Override
     protected void execute(final Command command) {
         service.createFlight(command.getParams().get(0).intValue(), command.getParams().get(1).intValue());
-        System.out.println("Flight Created Successfully");
+        System.out.println("Flight Created Successfully with " +
+                command.getParams().get(0) +
+                " Economy Seat(s) and " +
+                command.getParams().get(1) +
+                " Business Seat(s)");
     }
 }
